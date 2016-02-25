@@ -46,13 +46,11 @@ function fenyexianshi(){
 	$page=addslashes($_POST['p']);
 	$nr=addslashes($_POST['nr']);
 	if($nr=='rc'){
-		//$sqlc="select count(*) as recnum from cheliang";
 		$sqlc="select count(*) from diaoyundan where CYRID='$cyrxm' and CFSJ between '$shij1' and  '$shij2' ";
 		$nc=$dbh->query($sqlc)->fetchColumn(0);
 		echo json_encode(array('res'=>'Ok','rc'=>$cyrxm));
 		exit(0);
 	}
-	//$sql="select cheliang.id,CPH,CZZ,XM from cheliang,chengyunren where cheliang.CYRID=chengyunren.id ";
 	$sql="select CPH,JSXM,DYDH,CFSJ from diaoyundan where CYRID='$cyrxm' and CFSJ between '$shij1' and  '$shij2' ";
 	if($page<0)
 		$page=0;

@@ -1,5 +1,6 @@
 ﻿<?php 
 session_start();
+//调试
 require_once('config.php');
 if(!isset($_SESSION['userid'])){
     echo json_encode(array('res'=>'Error','msg'=>'没有登录或已超时!'));

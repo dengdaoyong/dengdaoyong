@@ -1,5 +1,6 @@
 ﻿<?php 
 //echo "string";
+echo "你的反馈的恢复快两点睡觉了开发活动";
 session_start();
 require_once('config.php');
 if(!isset($_SESSION['userid'])){
